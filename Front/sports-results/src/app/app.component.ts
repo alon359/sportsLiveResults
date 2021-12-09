@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { PrintServiceService } from './services/print-service.service';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +6,9 @@ import { PrintServiceService } from './services/print-service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private printS: PrintServiceService){}
-
-  title = 'sports-results';
-
+  constructor(){}
   ngOnInit(): void{
-    console.log(this.printS.GalitSex());
-    
   }
+
+
 }
