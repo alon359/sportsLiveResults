@@ -7,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
 
-  constructor() { }
-
+  a = ['Liverpol', 'Real Madrid']
+  b = ['Barcelona', 'Totenham']
   Team1 ='galit'
   Team2 ='smoking'
+
+  constructor() { }
   ngOnInit(): void {
   }
 
