@@ -13,11 +13,6 @@ export class BoardComponent implements OnInit {
     teamHome : 'Barcelona',
     teamAway : 'Real Madrid',
     inPlay:false
-    },
-    {
-      teamHome : 'Barcelona',
-      teamAway : 'Real Madrid',
-      inPlay:false
     }
   ]
   constructor() {
