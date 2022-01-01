@@ -4,16 +4,19 @@
   border: solid red 5px;
   height: 4em;
   align-items: stretch;
+  border-radius: 10px;
 
 }
 
 .box {
-  margin: 2em;
+  margin: 0.8em;
   text-align: center;
-  font-size: 10px;
+  font-size: 20px;
+  font-weight: bold;
   font-family:'Courier New', Courier, monospace;
-  width:15em;
-  height: 4em;
+  width:10em;
+  height: 2em;
   border: solid blue 5px;
+  border-radius: 25px;
 
 }

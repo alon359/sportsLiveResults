@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {Game} from '../../models/game'
 
 @Component({
   selector: 'app-board',
@@ -7,12 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
 
-  a = ['Liverpol', 'Real Madrid']
-  b = ['Barcelona', 'Totenham']
-  Team1 ='galit'
-  Team2 ='smoking'
+ game: Game[] =[
+    {
+    teamHome : 'Barcelona',
+    teamAway : 'Real Madrid',
+    inPlay:false
+    },
+    {
+      teamHome : 'Barcelona',
+      teamAway : 'Real Madrid',
+      inPlay:false
+    }
+  ]
+  constructor() {
 
-  constructor() { }
+  }
+
+
   ngOnInit(): void {
   }
 
