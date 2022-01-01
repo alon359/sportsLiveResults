@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 import { HomePageComponent } from './core/home-page/home-page.component';
 import { BoardComponent } from './core/components/board/board.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BoardComponent } from './core/components/board/board.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

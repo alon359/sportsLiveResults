@@ -12,7 +12,8 @@ export class BoardComponent implements OnInit {
     {
     teamHome : 'Barcelona',
     teamAway : 'Real Madrid',
-    inPlay:false
+    inPlay:false,
+    country:'spain'
     }
   ]
   constructor() {
