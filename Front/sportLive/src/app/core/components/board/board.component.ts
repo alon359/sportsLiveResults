@@ -9,6 +9,8 @@ export class BoardComponent implements OnInit {
 
   constructor() { }
 
+  Team1 ='galit'
+  Team2 ='smoking'
   ngOnInit(): void {
   }
 

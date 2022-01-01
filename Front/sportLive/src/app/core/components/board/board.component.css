@@ -1,0 +1,19 @@
+.flex-container{
+  display: flex;
+  justify-content:center;
+  border: solid red 5px;
+  height: 4em;
+  align-items: stretch;
+
+}
+
+.box {
+  margin: 2em;
+  text-align: center;
+  font-size: 10px;
+  font-family:'Courier New', Courier, monospace;
+  width:15em;
+  height: 4em;
+  border: solid blue 5px;
+
+}
