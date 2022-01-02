@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const axios = require("axios").default;
-const today = new Date();
+
 const Dayformat = require('../DayFormat')
+
+const today = new Date();
 const dayFormat = new Dayformat()
 
 
@@ -12,6 +14,7 @@ const dayFormat = new Dayformat()
 router.
 route('/getSpainToday')
 .get((req, res)=>{
+
   var options = {
     method: 'GET',
     url: 'https://api-football-v1.p.rapidapi.com/v3/fixtures',
