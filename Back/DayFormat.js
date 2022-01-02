@@ -1,14 +1,16 @@
+const { format } = require("express/lib/response");
+
 class DayFormat {
     constructor(today, day, month, year){
         this.today = new Date();
         this.day = this.today.getUTCDate()
         this.month = this.today.getMonth() + 1
         this.year = this.today.getFullYear()
-        this.format()
-        this.formatStr = "" + this.year + "-" + this.day + "-" + this.month
+        this.changeData()
+        this.formatStr = "" + this.year + "-" + this.month + "-" + this.day
     }
 
-    format() {
+    changeData() {
         if(this.day < 10){
             this.day = '0' + this.day
         }else {
@@ -22,7 +24,7 @@ class DayFormat {
         this.year = '' + this.year
     }
     
-    getFormatStr() {
+      getFormatStr() {
         return this.formatStr;
     }
 }
