@@ -71,6 +71,9 @@ header .logo{
   height: 15ex;
   width: 12em
 }
+.box3:hover{
+  background-color:aqua;
+}
 
 .head{
   display:flex;
