@@ -17,8 +17,8 @@ app.get('/', (req, res) =>{
 
 
 
-app.listen(process.env.PORT, async() =>{
-    console.log('Listen to port ' + process.env.PORT);
+app.listen(3000, async() =>{
+    console.log('Listen to port ' + 3000);
     setTimeout(()=>{
         console.log(dayFormat.getFormatStr());
     },5000)   
