@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {BoardComponent} from '../components/board/board.component'
+import { GameUpdateService } from '../services/game-update.service'
 
 @Component({
   selector: 'app-home-page',
@@ -7,11 +8,17 @@ import {BoardComponent} from '../components/board/board.component'
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
-
-  constructor() {
+    data:any;
+  constructor(private getUpdate: GameUpdateService) {
    }
 
   ngOnInit(): void {
+  }
+
+  doGalit(){
+     this.data = this.getUpdate.getUpdate().subscribe((update:any) =>{
+        console.log(update);
+      })
   }
 
 }
