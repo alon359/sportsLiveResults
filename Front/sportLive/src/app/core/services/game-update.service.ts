@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
+import { Game } from '../models/Game';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,8 @@ export class GameUpdateService {
    }
    rootURL = '/api';
 
-   getUpdate() {
-    return this.http.get('/api/getData//getSpainToday')
+   getUpdateSpainToday() {
+    return this.http.get<Game[]>('/api/getData/getSpainToday')
 
     }
 

@@ -16,7 +16,7 @@ export class HomePageComponent implements OnInit {
   }
 
   doGalit(){
-     this.data = this.getUpdate.getUpdate().subscribe((update:any) =>{
+     this.data = this.getUpdate.getUpdateSpainToday().subscribe((update:any) =>{
         console.log(update);
       })
   }

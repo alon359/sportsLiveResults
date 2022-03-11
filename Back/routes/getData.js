@@ -18,7 +18,7 @@ route('/getSpainToday')
   var options = {
     method: 'GET',
     url: 'https://api-football-v1.p.rapidapi.com/v3/fixtures',
-    params: {league: '140', season: '2021',from:'2022-03-10', to: '2022-03-11'},
+    params: {league: '140', season: '2021',from:dayFormat.getFormatStr(), to: dayFormat.getFormatStr()},
     headers: {
       'x-rapidapi-host': 'api-football-v1.p.rapidapi.com',
       'x-rapidapi-key': '4af38228aemsh7e99fcb40eb6662p10f693jsn5a8bd611e0d9'
@@ -26,9 +26,16 @@ route('/getSpainToday')
   };
 
     axios.request(options).then(function (response) {
-        res.send(response.data);
-        console.log(response.data.response[0].teams.home.name);
-    }).catch(function (error) {
+      let teams = []
+        for(let i=0;i<response.data.response.length;i++){
+          teams.push({'Home' : response.data.response[i].teams.home.name,
+          'Away':response.data.response[i].teams.away.name,
+          'Status': response.data.response[i].fixture.status.long })
+          
+        }
+          res.json(teams)
+         })
+    .catch(function (error) {
         console.error(error);
     });
 })
