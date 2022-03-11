@@ -1,11 +1,17 @@
-<div *ngFor="let i of games" class="flex-container bg-dark text-white">
-  <div class=box>
-    <p> {{i.Home}}<p>
+<div *ngIf="thereIsGames">
+  <div *ngFor="let i of games" class="flex-container bg-dark text-white">
+    <div class=box>
+      <p> {{i.Home}}<p>
+    </div>
+    <div class=box>
+      <h3>{{i.Status}}</h3>
+    </div>
+    <div class=box>
+      <p>{{i.Away}}<p>
+    </div>
   </div>
-  <div class=box>
-    <h3>{{i.Status}}</h3>
-  </div>
-  <div class=box>
-    <p>{{i.Away}}<p>
-  </div>
+</div>
+
+<div *ngIf="!thereIsGames" class="noGames">
+  <p>There is no Games today</p>
 </div>

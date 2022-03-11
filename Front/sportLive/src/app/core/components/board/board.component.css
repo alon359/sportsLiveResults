@@ -21,3 +21,10 @@
   border-radius: 25px;
 
 }
+
+.noGames{
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  font-family:'Courier New', Courier, monospace;
+}

@@ -12,16 +12,17 @@ import { GameUpdateService } from '../../services/game-update.service';
 export class BoardComponent implements OnInit {
 
   games: Game[] = []
+  thereIsGames:boolean = false;
   constructor(private getUpdateService : GameUpdateService) {
   }
 
 
   ngOnInit(): void {
     this.getUpdateService.getUpdateSpainToday().subscribe(data => {
+      if(data.length>0){this.thereIsGames = true}
       for(let i = 0;i<data.length;i++){
         this.games.push(data[i])
       }
-      console.log(this.games)
     })
   }
 
