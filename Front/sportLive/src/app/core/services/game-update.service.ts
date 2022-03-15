@@ -15,6 +15,8 @@ export class GameUpdateService {
    rootURL = '/api';
 
    getUpdateSpainToday() {
+
+
     return this.http.get<Game[]>('/api/getData/getSpainToday')
 
     }

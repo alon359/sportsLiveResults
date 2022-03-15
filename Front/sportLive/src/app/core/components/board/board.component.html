@@ -1,12 +1,12 @@
 <div *ngIf="thereIsGames">
   <div *ngFor="let i of games" class="flex-container bg-dark text-white">
-    <div class=box>
+    <div class='box'>
       <p> {{i.Home}}<p>
     </div>
-    <div class=box>
-      <h3>{{i.Status}}</h3>
+    <div class='box' >
+      <p>{{i.Goals[0]}} -- {{ i.Goals[1]}}</p>
     </div>
-    <div class=box>
+    <div class='box'>
       <p>{{i.Away}}<p>
     </div>
   </div>
